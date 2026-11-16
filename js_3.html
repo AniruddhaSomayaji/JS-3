@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Methods and Loops</title>
+  </head>
+  <body>
+    <h2>Methods and Loops</h2>
+<p>Numbers from 1 to 10</p>
+<p id="numbers"></p>
+<p id="random"></p>
+<p id="day"></p>
+
+<script>
+    
+  function displayNumbers() {
+    let numbers = "";
+    for (let i = 1; i <= 10; i++) {
+      numbers += i + " ";
+    }
+    document.getElementById("numbers").innerHTML = numbers;
+  }
+
+  function displayRandomNumber() {
+    let randomNum = Math.floor(Math.random() * 100) + 1;
+    document.getElementById("random").innerHTML = "Random Number: " + randomNum;
+  }
+
+  function displayDayOfWeek() {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const today = new Date();
+    const dayName = days[today.getDay()];
+    document.getElementById("day").innerHTML = "Today is: " + dayName;
+  }
+
+  
+  displayNumbers();
+  displayRandomNumber();
+  displayDayOfWeek();
+  
+ 
+ </script> 
+
+  </body>
+</html>
